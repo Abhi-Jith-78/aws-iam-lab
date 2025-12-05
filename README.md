@@ -39,14 +39,14 @@ GitHub renders this automatically — no image needed.
 flowchart TD
     A[IAM Users] --> B{IAM Groups}
 
-    A1[user-1] --> B1[S3-Support]
-    A2[user-2] --> B2[EC2-Support]
-    A3[user-3] --> B3[EC2-Admin]
+    user1[user-1] --> group1[S3-Support]
+    user2[user-2] --> group2[EC2-Support]
+    user3[user-3] --> group3[EC2-Admin]
 
-    B1 --> C1[AmazonS3ReadOnlyAccess (Managed Policy)]
-    B2 --> C2[AmazonEC2ReadOnlyAccess (Managed Policy)]
-    B3 --> C3[EC2-Admin-Policy (Inline Policy)]
+    group1 --> policy1["AmazonS3ReadOnlyAccess (Managed Policy)"]
+    group2 --> policy2["AmazonEC2ReadOnlyAccess (Managed Policy)"]
+    group3 --> policy3["EC2-Admin-Policy (Inline Policy)"]
 
-    C1 --> D1[S3 Read-Only Access]
-    C2 --> D2[EC2 Describe Access]
-    C3 --> D3[EC2 Start/Stop/Describe Access]
+    policy1 --> access1["S3 Read-Only Access"]
+    policy2 --> access2["EC2 Describe Access"]
+    policy3 --> access3["EC2 Start/Stop/Describe Access"]
