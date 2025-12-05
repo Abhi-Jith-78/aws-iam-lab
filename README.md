@@ -43,11 +43,10 @@ flowchart TD
     A2[user-2] --> B2[EC2-Support]
     A3[user-3] --> B3[EC2-Admin]
 
-    B1 --> C1[AmazonS3ReadOnlyAccess<br>(Managed Policy)]
-    B2 --> C2[AmazonEC2ReadOnlyAccess<br>(Managed Policy)]
-    B3 --> C3[EC2-Admin-Policy<br>(Inline Policy)]
+    B1 --> C1[AmazonS3ReadOnlyAccess (Managed Policy)]
+    B2 --> C2[AmazonEC2ReadOnlyAccess (Managed Policy)]
+    B3 --> C3[EC2-Admin-Policy (Inline Policy)]
 
     C1 --> D1[S3 Read-Only Access]
     C2 --> D2[EC2 Describe Access]
     C3 --> D3[EC2 Start/Stop/Describe Access]
-
